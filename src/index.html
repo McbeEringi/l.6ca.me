@@ -13,7 +13,8 @@
 </head><body>
 	<style>
 	.icon{display:block;}
-	.icon>img{width:100%;height:100vh;object-fit:contain;transform:scale(.8);}
+	.icon>img{width:100%;height:80vh;object-fit:contain;transform:scale(.8);animation:1s anm;}
+	@keyframes anm{0%{height:100vh;}}
 
 	.root{margin:16px auto 64px;max-width:960px;box-sizing:border-box;padding:32px;position:relative;}
 	.root::before{
@@ -33,8 +34,8 @@
 	}
 	</style>
 	<picture class="icon">
-		<source srcset="https://mcbeeringi.dev/img/icon.svg#!_" media="(prefers-color-scheme:dark)">
-		<img src="https://mcbeeringi.dev/img/icon.svg#_">
+		<source srcset="img/icon.svg#!_" media="(prefers-color-scheme:dark)">
+		<img src="img/icon.svg#_">
 	</picture>
 	<div class="root" role="main">
 		<h1>6ca.me</h1>
