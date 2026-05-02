@@ -11,14 +11,7 @@
 		"watch_dir":["src","build.mjs"]
 	},
 	"routes": [
-		{
-			"pattern": "6ca.me",
-			"custom_domain": true
-		},
-		{
-			"pattern": "www.6ca.me",
-			"custom_domain": true
-		}
+		{"pattern":"6ca.me","custom_domain":true}
 	],
 
 	// "main":"src/index.mjs",
