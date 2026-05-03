@@ -17,7 +17,7 @@
 
 	.root{margin:16px auto 64px;max-width:960px;box-sizing:border-box;padding:32px;position:relative;}
 	.root::before{
-		content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;
+		content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:-1;
 		background-color:var(--fg);
 		filter:blur(16px)opacity(.2);
 		border-radius:64px;
@@ -26,11 +26,13 @@
 	.links{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:16px;}
 	.links>*{padding:16px;position:relative;}
 	.links>*::before{
-		content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;
+		content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:-1;
 		background-color:var(--fg);
 		filter:blur(4px)opacity(.1);
 		border-radius:32px;
 	}
+	.links>*>img{width:100%;height:auto;border-radius:25%;clip-path:url("/img/logos.svg#clip");animation:.5s opac;}
+	@keyframes opac{0%,50%{opacity:0;}}
 	</style>
 	<picture class="icon">
 		<source srcset="img/icon.svg#!_" media="(prefers-color-scheme:dark)">
@@ -42,7 +44,6 @@
 			McbeEringi Link Portal<br>
 			hex color code <span style="color:#6ca;font-weight:bolder;">#66ccaa</span> from icon
 		</p>
-		<div class="links" tmpl="<div><h2><a href=%22{{src}}%22>{{name}}</a></h2><p>{{dst}}</p></div>"></div>
-		<img src="logos.svg">
+		<div class="links" tmpl="<div><h2><a href=%22{{src}}%22>{{name}}</a></h2><img width=%221%22 height=%221%22 src=%22{{icon}}%22><p>{{dst}}</p></div>"></div>
 	</div>
 </body></html>

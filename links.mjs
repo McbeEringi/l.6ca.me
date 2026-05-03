@@ -1,50 +1,49 @@
 export default[
 	{
 		name:'GitHub Pages',
-		icon:{
-			light:'https://mcbeeringi.github.io/img/icon.svg',
-			dark:'https://mcbeeringi.github.io/img/icon.svg#!',
-		},
+		icon:'https://mcbeeringi.github.io/img/icon.svg',
 		src:'/ghp',
 		dst:'https://mcbeeringi.github.io/',
 		code:301
 	},
 	{
 		name:'HomePage',
-		icon:{
-			light:'https://mcbeeringi.dev/img/icon.svg',
-			dark:'https://mcbeeringi.dev/img/icon.svg'
-		},
+		icon:'https://mcbeeringi.dev/img/icon.svg',
 		src:'/h',
 		dst:'https://mcbeeringi.dev/',
 		code:301
 	},
 	{
 		name:'X(Twitter)',
+		icon:'/img/logos.svg#twitter',
 		src:'/x',
 		dst:'https://x.com/McbeEringi',
 		code:301
 	},
 	{
 		name:'GitHub',
+		icon:'/img/logos.svg#github',
 		src:'/g',
 		dst:'https://github.com/mcbeeringi',
 		code:301
 	},
 	{
 		name:'npm',
+		icon:'/img/logos.svg#npm',
 		src:'/n',
 		dst:'https://npmjs.com/~mcbeeringi',
 		code:301
 	},
 	{
 		name:'misskey.io',
+		icon:'/img/logos.svg#misskeyio',
 		src:'/m',
 		dst:'https://misskey.io/@mcbeeringi',
 		code:301
 	},
 	{
 		name:'Qiita',
+		icon:'/img/logos.svg#qiita',
 		src:'/q',
 		dst:'https://qiita.com/mcbeeringi',
 		code:301
