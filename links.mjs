@@ -1,12 +1,20 @@
 export default[
 	{
 		name:'GitHub Pages',
+		icon:{
+			light:'https://mcbeeringi.github.io/img/icon.svg',
+			dark:'https://mcbeeringi.github.io/img/icon.svg#!',
+		},
 		src:'/ghp',
-		dst:'https://mcbeeringi.github.io',
+		dst:'https://mcbeeringi.github.io/',
 		code:301
 	},
 	{
 		name:'HomePage',
+		icon:{
+			light:'https://mcbeeringi.dev/img/icon.svg',
+			dark:'https://mcbeeringi.dev/img/icon.svg'
+		},
 		src:'/h',
 		dst:'https://mcbeeringi.dev/',
 		code:301
