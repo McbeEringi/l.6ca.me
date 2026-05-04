@@ -27,8 +27,8 @@
 		</symbol>
 	</defs>
 
-	<view id="mask" viewBox="0 -1 1 1"/>
-	<path d="M0,-.5q0,.5.5.5t.5-.5-.5-.5-.5.5z" filter="url(#fmask)"/>
+	<view id="mask" viewBox="-.02 -1.04 1.04 1.04"/>
+	<path d="M0,-.52q0,.5.5.5t.5-.5-.5-.5-.5.5z" filter="url(#fmask)"/>
 	<a href="#twitter">
 		<view id="twitter" viewBox="0 0 1 1"/>
 		<use href="#_bg" fill="#1d9bf0"/>
