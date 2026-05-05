@@ -1,4 +1,0 @@
-= 6ca.me
-
-image::favicon.ico[icon,128]
-URL Shortener for personal use
