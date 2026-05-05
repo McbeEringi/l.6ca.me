@@ -1,7 +1,3 @@
-/**
- * For more details on how to configure Wrangler, refer to:
- * https://developers.cloudflare.com/workers/wrangler/configuration/
- */
 {
 	"$schema":"node_modules/wrangler/config-schema.json",
 	"name":"6ca-me",
@@ -14,14 +10,8 @@
 		{"pattern":"6ca.me","custom_domain":true},
 		{"pattern":"www.6ca.me","custom_domain":true}
 	],
-
-	// "main":"src/index.mjs",
 	"assets":{
 		"directory":"./dst",
 		"not_found_handling":"404-page"
-		// "binding":"ASSETS"
-	},
-	"observability":{
-		"enabled":true
 	}
 }
