@@ -8,9 +8,9 @@ export default[
 	},
 	{
 		name:'HomePage',
-		icon:'https://mcbeeringi.dev/img/icon.svg',
+		icon:'https://6ca.me/img/icon.svg',
 		src:'/h',
-		dst:'https://mcbeeringi.dev/',
+		dst:'https://6ca.me/',
 		code:301
 	},
 	{
