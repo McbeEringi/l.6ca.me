@@ -1,14 +1,13 @@
 {
 	"$schema":"node_modules/wrangler/config-schema.json",
-	"name":"6ca-me",
+	"name":"l-6ca-me",
 	"compatibility_date":"2025-07-15",
 		"build":{
 		"command":"bun build.mjs",
 		"watch_dir":["src","build.mjs","links.mjs"]
 	},
 	"routes": [
-		{"pattern":"6ca.me","custom_domain":true},
-		{"pattern":"www.6ca.me","custom_domain":true}
+		{"pattern":"l.6ca.me","custom_domain":true}
 	],
 	"assets":{
 		"directory":"./dst",
