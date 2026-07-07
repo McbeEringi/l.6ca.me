@@ -1,5 +1,5 @@
 #!/bin/env -S bun --install=force
-import links from'./links.mjs'
+import links from'./src/redirects.mjs'
 
 await Bun.$`rm -rf dst`;
 await Bun.$`cp -r src dst`;

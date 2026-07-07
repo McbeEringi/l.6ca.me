@@ -4,46 +4,22 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>l.6ca.me</title>
 	<meta name="description" content="McbeEringi Link Portal">
+	<link rel="icon" type="image/png" href="/favicon.png">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="6ca.me">
+	<meta property="og:title" content="l.6ca.me">
 	<meta property="og:description" content="McbeEringi Link Portal">
-	<meta property="og:url" content="https://6ca.me/">
-	<meta property="og:image" content="https://6ca.me/img/icon!.png">
-	<link href="style.css" rel="stylesheet">
+	<meta property="og:url" content="https://l.6ca.me/">
+	<meta property="og:image" content="https://l.6ca.me/img/icon!.png">
+	<link href="https://6ca.me/src/style.css" rel="stylesheet">
 </head><body>
-	<style>
-	.icon>img{display:block;margin:0 auto;width:min(100%,960px);height:auto;max-height:80vh;object-fit:contain;transform:scale(.8);}
-
-	.root{width:min(100%,960px);box-sizing:border-box;position:relative;margin:0 auto 64px;padding:32px;}
-	.root::before{
-		content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;
-		border-radius:64px;
-		background-color:var(--fg);filter:blur(16px);opacity:.1;
-	}
-	hr{box-sizing:border-box;border:4px solid var(--fg);border-radius:8px;filter:blur(2px)opacity(.2);will-change:filter;}
-	.links{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));}
-	.links>*{text-align:center;padding:16px;}
-	.links a{display:inline-block;transition:.2s;outline:none;}
-	.links a:hover,.links a:focus{transform:scale(1.1);}
-	.links a>img{
-		width:120px;max-width:100%;height:auto;
-		border-radius:25%;
-		-webkit-mask:url("/img/logos.svg#mask") center/contain;
-		mask:url("/img/logos.svg#mask") center/contain;
-	}
-	</style>
-	<picture class="icon">
-		<source srcset="https://6ca.me/img/icon.svg#!_" media="(prefers-color-scheme:dark)">
-		<img src="https://6ca.me/img/icon.svg#_" width="1" height="1">
-	</picture>
-	<div class="root" aria="main">
-		<h1>l.6ca.me</h1>
-		<p>
-			McbeEringi Link Portal<br>
-			hex color code <span style="color:#6ca;font-weight:bolder;">#66ccaa</span> from icon
-		</p>
-		<hr>
-		<div class="links" tmpl="<div><a href=%22{{src}}%22 data-dst=%22{{dst}}%22><img src=%22{{icon}}%22 width=%221%22 height=%221%22><br>{{name}}</a></div>"></div>
+	<main>
+	<h1>l.6ca.me</h1>
+	<p>McbeEringi Link Portal</p>
+	<a href="redirects.mjs">redirects.mjs</a>
+	<hr>
+	<div class="zab">
+		<div class="stuff links" tmpl="<a href=%22{{src}}%22 data-dst=%22{{dst}}%22 style=%22--img:url({{icon}})%22><p>{{name}}</p></a>"></div>
 	</div>
+	</main>
 	<script>document.documentElement.addEventListener('touchstart',_=>_,{passive:true});</script>
 </body></html>

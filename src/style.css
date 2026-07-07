@@ -1,8 +1,0 @@
-:root{
-	--fg:#210;--bg:#eed;
-	color:var(--fg);background-color:var(--bg);
-	font-family:sans-serif;accent-color:#6ca;
-	tab-size:2;overflow-wrap:break-word;
-}
-@media(prefers-color-scheme:dark){:root{--fg:#def;--bg:#223;}}
-a{color:var(--fg);}

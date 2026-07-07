@@ -4,7 +4,7 @@
 	"compatibility_date":"2025-07-15",
 		"build":{
 		"command":"bun build.mjs",
-		"watch_dir":["src","build.mjs","links.mjs"]
+		"watch_dir":["src","build.mjs"]
 	},
 	"routes": [
 		{"pattern":"l.6ca.me","custom_domain":true}
