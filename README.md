@@ -1,4 +1,4 @@
 # l.6ca.me
 
-![icon](./src/favicon.png)
+![icon](./src/img/favicon.png)
 McbeEringi link portal
