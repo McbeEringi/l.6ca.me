@@ -2,7 +2,7 @@
 	"$schema":"node_modules/wrangler/config-schema.json",
 	"name":"l-6ca-me",
 	"compatibility_date":"2025-07-15",
-		"build":{
+	"build":{
 		"command":"bun build.mjs",
 		"watch_dir":["src","build.mjs"]
 	},
