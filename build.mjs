@@ -5,7 +5,10 @@ await Bun.$`rm -rf dst`;
 await Bun.$`cp -r src dst`;
 await Bun.write(
 	'dst/_redirects',
-	links.map(({name,src,dst,code})=>`${src}#${name.replace(/\s/g,'_')} ${dst} ${code}`).join('\n')
+	[
+		'/favicon.ico /img/favicon.png 301',
+		...links.map(({name,src,dst,code})=>`${src}#${name.replace(/\s/g,'_')} ${dst} ${code}`)
+	].join('\n')
 );
 
 await Bun.write(
