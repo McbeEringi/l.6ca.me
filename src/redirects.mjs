@@ -8,7 +8,8 @@ export default[
 	},
 	{
 		name:'HomePage',
-		icon:'https://6ca.me/img/icon.svg',
+		icon:'https://6ca.me/img/favicon.png',
+		attr:'class="irp" ',
 		src:'/h',
 		dst:'https://6ca.me/',
 		code:301
