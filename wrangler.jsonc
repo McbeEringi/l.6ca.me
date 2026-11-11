@@ -1,16 +1,12 @@
 {
-	"$schema":"node_modules/wrangler/config-schema.json",
-	"name":"l-6ca-me",
-	"compatibility_date":"2025-07-15",
-	"build":{
-		"command":"bun build.mjs",
-		"watch_dir":["src","build.mjs"]
-	},
-	"routes": [
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "l-6ca-me",
+	"compatibility_date": "2026-11-09",
+	"build":{"command":"bun 6ca-ssg","watch_dir":["src","modules.mjs"]},
+	"routes":[
 		{"pattern":"l.6ca.me","custom_domain":true}
 	],
-	"assets":{
-		"directory":"./dst",
-		"not_found_handling":"404-page"
-	}
+	"assets":{"directory":"./dst","not_found_handling":"404-page"},
+	"observability":{"enabled":true},
+	"upload_source_maps": true
 }

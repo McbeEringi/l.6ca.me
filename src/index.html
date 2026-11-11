@@ -1,25 +1,35 @@
-<!DOCTYPE html>
-<html prefix="og:http://ogp.me/ns#" lang="ja"><head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>l.6ca.me</title>
-	<meta name="description" content="McbeEringi Link Portal">
-	<link rel="icon" type="image/png" href="/img/favicon.png">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="l.6ca.me">
-	<meta property="og:description" content="McbeEringi Link Portal">
-	<meta property="og:url" content="https://l.6ca.me/">
-	<meta property="og:image" content="https://l.6ca.me/img/apple-touch-icon.png">
-	<link href="https://6ca.me/src/style.css" rel="stylesheet">
-</head><body>
-	<main>
-	<h1>l.6ca.me</h1>
-	<p>McbeEringi Link Portal</p>
-	<a href="redirects.mjs">redirects.mjs</a>
-	<hr>
-	<div class="zab">
-		<div class="stuff links" tmpl="<a href=%22{{src}}%22 data-dst=%22{{dst}}%22 {{attr}}style=%22--img:url({{icon}})%22><p>{{name}}</p></a>"></div>
-	</div>
-	</main>
-	<script>document.documentElement.addEventListener('touchstart',_=>_,{passive:true});</script>
-</body></html>
+<script type="build">
+import{join}from'node:path';
+import links from'./redirects.mjs';
+import tmpl from'html_tmpl';
+import cfg from'config_default';
+
+await Bun.write(
+	join(import.meta.dir,'_redirects'),
+	[
+		'/favicon.ico /img/favicon.png 301',
+		...links.map(({name,src,dst,code})=>`${src}#${name.replace(/\s/g,'_')} ${dst} ${code}`)
+	].join('\n')
+);
+
+export default x=>(
+	x=tmpl(cfg)(x),
+	x.html=new HTMLRewriter()
+	.on('div#links',{element:e=>e.append(
+		links.map(x=>`<a href="${x.src??''}" data-dst="${x.dst??''}" ${x.attr??''}style="--img:url(${x.icon??''});"><p>${x.name??''}</p></a>`).join('\n'),
+		{html:1}
+	)})
+	.transform(x.html),
+	x
+);
+</script>
+
+<main>
+<h1>l.6ca.me</h1>
+<p>McbeEringi Link Portal</p>
+<a href="./redirects.mjs">redirects.mjs</a>
+<hr>
+<div class="zab">
+	<div class="stuff" id="links"></div>
+</div>
+</main>
